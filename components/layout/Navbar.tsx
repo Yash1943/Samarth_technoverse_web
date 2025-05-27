@@ -30,6 +30,13 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -48,6 +55,7 @@ export default function Navbar() {
     { href: "/services", label: "Services" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
+    { href: "/Careers", label: "Careers" },
   ];
 
   return (
@@ -79,6 +87,7 @@ export default function Navbar() {
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                       active={pathname === "/"}
+                      onClick={scrollToTop}
                     >
                       Home
                     </NavigationMenuLink>
@@ -121,6 +130,7 @@ export default function Navbar() {
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                       active={pathname === "/about"}
+                      onClick={scrollToTop}
                     >
                       About
                     </NavigationMenuLink>
@@ -131,8 +141,20 @@ export default function Navbar() {
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                       active={pathname === "/contact"}
+                      onClick={scrollToTop}
                     >
                       Contact
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/Careers" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                      active={pathname === "/Careers"}
+                      onClick={scrollToTop}
+                    >
+                      Careers
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -171,7 +193,10 @@ export default function Navbar() {
                       ? "bg-primary text-primary-foreground"
                       : "hover:bg-muted"
                   )}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   {link.label}
                 </Link>
@@ -185,13 +210,17 @@ export default function Navbar() {
                     key={service.id}
                     href={`/services/${service.id}`}
                     className="flex items-center px-4 py-2 text-sm rounded-md hover:bg-muted"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     {icons[service.icon as keyof typeof icons]}
                     <span>{service.title}</span>
                   </Link>
                 ))}
               </div>
+
 
               <div className="pt-4">
                 <Button className="w-full" onClick={() => setIsOpen(false)}>

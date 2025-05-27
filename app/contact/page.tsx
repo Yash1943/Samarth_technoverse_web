@@ -100,6 +100,12 @@ export default function ContactPage() {
                       <p className="text-muted-foreground">
                         Samarth House , Visnagar, Gujarat, India , 384315
                       </p>
+                      <p className="text-muted-foreground">
+                        Ahemdabad, Gujarat, India
+                      </p>
+                      <p className="text-muted-foreground">
+                        Mumbai, Maharashtra, India
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">

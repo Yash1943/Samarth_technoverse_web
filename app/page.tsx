@@ -17,7 +17,7 @@ export default function Home() {
       <Services />
       <SDLCSection />
       <Testimonials />
-      <Team />
+      {/* <Team /> */}
       <CTASection />
     </div>
   );

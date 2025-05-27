@@ -85,13 +85,17 @@ export default function Hero() {
                 : "opacity-0 transform translate-y-10"
             )}
           >
-            <Button size="lg" className="text-md">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-md">
-              Explore Services
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="text-md">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/services">
+              <Button variant="outline" size="lg" className="text-md">
+                Explore Services
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

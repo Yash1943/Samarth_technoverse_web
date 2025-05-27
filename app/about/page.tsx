@@ -32,7 +32,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-muted/30 p-4">
+      <section className="py-16 md:py-24 bg-muted/30 p-6">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-muted/50">
+      {/* <section className="py-12 bg-muted/50">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat) => (
@@ -110,7 +110,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-16 md:py-24">
         <div className="container">
@@ -139,7 +139,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Team />
+      {/* <Team /> */}
 
       <section className="py-16 md:py-20 bg-card">
         <div className="container">

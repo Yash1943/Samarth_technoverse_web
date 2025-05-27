@@ -2,6 +2,7 @@ export const services = [
   {
     id: "erp-solutions",
     title: "ERP Solutions",
+    image: "/images/Erp_Format.png",
     description: "Comprehensive enterprise resource planning solutions tailored to streamline your business operations and boost productivity.",
     icon: "database",
     features: [

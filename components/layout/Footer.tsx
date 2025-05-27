@@ -3,12 +3,28 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Logo from "@/components/shared/logo";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
+  const addresses = [
+    {
+      country: "India",
+      address: "Samarth House, Visnagar, Gujarat, India, 384315",
+    },
+    {
+      country: "India",
+      address: "Ahemdabad, Gujarat, India",
+    },
+    {
+      country: "India",
+      address: "Mumbai, Maharashtra, India",
+    },
+  ];
+
   return (
     <footer className="bg-muted">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <Logo />
@@ -17,20 +33,6 @@ export default function Footer() {
               Transforming businesses through innovative technology solutions and
               expert consultancy services since 2025.
             </p>
-            <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-            </div>
           </div>
 
           <div>
@@ -92,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/Careers"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Careers
@@ -109,7 +111,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="bg-card p-6 rounded-lg shadow space-y-4">
             <h3 className="font-semibold text-lg">Newsletter</h3>
             <p className="text-muted-foreground">
               Subscribe to receive updates on new services and tech insights.
@@ -123,26 +125,6 @@ export default function Footer() {
               <Button>Subscribe</Button>
             </div>
             <div className="space-y-2 pt-4">
-              <div className="flex flex-col sm:flex-row items-start sm:space-x-2 gap-2">
-                <div className="flex items-start space-x-2 mb-2 sm:mb-0">
-                  <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                  <p className="text-sm text-muted-foreground">
-                    Samarth House, Visnagar, Gujarat, India, 384315
-                  </p>
-                </div>
-                <div className="w-full sm:w-[350px]">
-                  <iframe
-                    src="https://www.google.com/maps?q=Samarth+House,+Visnagar,+Gujarat,+India,+384315&output=embed"
-                    width="100%"
-                    height="150"
-                    style={{ border: 0, borderRadius: '0.5rem', marginTop: '0.5rem' }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Samarth Technoverse Location"
-                  />
-                </div>
-              </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">+91 98765 43210</p>
@@ -154,6 +136,34 @@ export default function Footer() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-2xl font-bold mb-2">Locations</h2>
+            <ul className="space-y-2">
+              {addresses.map((addr, idx) => (
+                <li key={idx} className="flex items-center space-x-2">
+                  <MapPin className="h-5 w-5 text-muted-foreground" />
+                  <span>{addr.address}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-start md:justify-end space-x-4">
+            <Button variant="ghost" size="icon" aria-label="Facebook">
+              <Facebook className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" aria-label="Twitter">
+              <Twitter className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" aria-label="Instagram">
+              <Instagram className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" aria-label="LinkedIn">
+              <Linkedin className="h-5 w-5" />
+            </Button>
           </div>
         </div>
 
