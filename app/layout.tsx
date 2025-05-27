@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import ChatBot from '@/components/shared/ChatBot';
 import LenisProvider from '@/components/shared/LenisProvider';
 import RouteLoadingOverlay from '@/components/shared/RouteLoadingOverlay';
+import LogoCarousel from '@/components/shared/LogoCarousel';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <div className="flex min-h-screen items-center flex-col w-full">
             <main className="flex-1 w-full">{children}</main>
           </div>
+          <LogoCarousel />
           <Footer />
           <ChatBot />
           <Toaster />
