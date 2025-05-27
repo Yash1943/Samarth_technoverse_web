@@ -41,7 +41,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden px-4 md:px-8 lg:px-16">
+    <div className="relative flex justify-center overflow-hidden px-4 md:px-8 lg:px-16">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background to-transparent opacity-90" />

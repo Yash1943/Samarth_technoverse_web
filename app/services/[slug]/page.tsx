@@ -26,7 +26,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     }
 
     return (
-        <div className="container py-16 md:py-24">
+        <div className="py-16 md:py-24 flex justify-center">
             {/* <Button variant="ghost" asChild className="mb-8">
                 <Link href="/services">
                     <ArrowLeft className="mr-2 h-4 w-4" />
@@ -34,7 +34,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 </Link>
             </Button> */}
 
-            <div className="relative max-w-4xl mx-auto min-h-[400px]">
+            <div className="relative max-w-4xl mx-auto min-h-[400px] flex justify-center">
                 {/* Background Image */}
                 {/* <Image
                     src={service.image || ""}
@@ -44,7 +44,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                     priority
                 /> */}
                 {/* Foreground Content */}
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 ">
                     <div className="mb-8 p-4 bg-primary/5 rounded-lg w-fit">
                         {icons[service.icon as keyof typeof icons]}
                     </div>

@@ -67,7 +67,7 @@ export default function Navbar() {
           : "bg-transparent"
       )}
     >
-      <div className="w-full px-4 md:px-8 lg:px-16 bg-background">
+      <div className="w-full px-4 md:px-8 lg:px-16 bg-background flex justify-center">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">

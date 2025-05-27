@@ -14,7 +14,7 @@ export default function Services() {
   const [activeTab, setActiveTab] = useState(services[0].id);
 
   return (
-    <section className="py-16 md:py-24 bg-muted/50">
+    <section className="py-16 md:py-24 bg-muted/50 flex justify-center">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

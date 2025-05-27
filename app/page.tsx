@@ -9,7 +9,7 @@ import SDLCSection from '@/components/home/SDLCSection';
 
 export default function Home() {
   return (
-    <div className="lg:px-4 ">
+    <div className="">
       <ScrollTransformSection>
         <Hero />
       </ScrollTransformSection>

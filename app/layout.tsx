@@ -32,13 +32,13 @@ export default function RootLayout({
         >
           <LenisProvider />
           <RouteLoadingOverlay />
-          <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <ChatBot />
-            <Toaster />
+          <Navbar />
+          <div className="flex min-h-screen items-center flex-col w-full">
+            <main className="flex-1 w-full">{children}</main>
           </div>
+          <Footer />
+          <ChatBot />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

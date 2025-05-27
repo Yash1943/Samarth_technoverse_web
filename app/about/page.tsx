@@ -32,7 +32,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-muted/30 p-6">
+      <section className="py-16 md:py-24 bg-muted/30 p-6 flex justify-center">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
         </div>
       </section> */}
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 flex justify-center">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -141,7 +141,7 @@ export default function AboutPage() {
 
       {/* <Team /> */}
 
-      <section className="py-16 md:py-20 bg-card">
+      <section className="py-16 md:py-20 bg-card  flex justify-center">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
