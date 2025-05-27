@@ -194,26 +194,8 @@ export default function CareersPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <h2 className="text-center max-w-3xl mx-auto mb-16">Currently Not Opened Any Position</h2>
-                        {/* {openPositions.map((position, index) => (
-                            <Card key={index} className="hover:shadow-lg transition-shadow">
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
-                                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
-                                        <span>{position.department}</span>
-                                        <span>•</span>
-                                        <span>{position.location}</span>
-                                        <span>•</span>
-                                        <span>{position.type}</span>
-                                    </div>
-                                    <Button variant="outline" className="w-full">
-                                        Apply Now
-                                        <ArrowRight className="ml-2 h-4 w-4" />
-                                    </Button>
-                                </CardContent>
-                            </Card>
-                        ))} */}
+                    <div className="flex flex-col items-center justify-center min-h-[200px]">
+                        <h2 className="text-2xl font-semibold mb-4">Currently Not Opened Any Position</h2>
                     </div>
 
                     <div className="text-center mt-12">

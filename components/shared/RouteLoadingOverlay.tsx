@@ -1,37 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function RouteLoadingOverlay() {
-    const router = useRouter();
     const pathname = usePathname();
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        let timeout: NodeJS.Timeout;
-
-        const handleStart = () => {
-            setLoading(true);
-            // Optional: Always show for at least 2 seconds
-            timeout = setTimeout(() => setLoading(false), 10000);
-        };
-        const handleComplete = () => {
-            clearTimeout(timeout);
-            setLoading(false);
-        };
-
-        router.events?.on('routeChangeStart', handleStart);
-        router.events?.on('routeChangeComplete', handleComplete);
-        router.events?.on('routeChangeError', handleComplete);
-
-        return () => {
-            router.events?.off('routeChangeStart', handleStart);
-            router.events?.off('routeChangeComplete', handleComplete);
-            router.events?.off('routeChangeError', handleComplete);
-            clearTimeout(timeout);
-        };
-    }, [router.events, pathname]);
+        setLoading(true);
+        // Show the overlay for a minimum time (e.g., 1s)
+        const timeout = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timeout);
+    }, [pathname]);
 
     if (!loading) return null;
 

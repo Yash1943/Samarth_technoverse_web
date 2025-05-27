@@ -40,7 +40,7 @@ export default function AboutPage() {
                 About Samarth Technoverse
               </h1>
               <p className="text-xl text-muted-foreground mb-6">
-                We're on a mission to help businesses leverage technology to achieve their full potential.
+                We&#39;re on a mission to help businesses leverage technology to achieve their full potential.
               </p>
               <p className="mb-4">
                 Founded in 2025, Samarth Technoverse has grown from a small team of passionate tech enthusiasts to a comprehensive IT solutions provider serving clients across multiple industries.
@@ -163,7 +163,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Tailored Solutions</h3>
                     <p className="text-muted-foreground">
-                      We don't believe in one-size-fits-all. Every solution we deliver is customized to your specific needs.
+                      We don&#39;t believe in one-size-fits-all. Every solution we deliver is customized to your specific needs.
                     </p>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold text-lg">End-to-End Service</h3>
                     <p className="text-muted-foreground">
-                      From initial consultation to ongoing support, we're with you at every step of your technology journey.
+                      From initial consultation to ongoing support, we&#39;re with you at every step of your technology journey.
                     </p>
                   </div>
                 </div>
