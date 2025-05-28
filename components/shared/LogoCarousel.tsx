@@ -5,11 +5,11 @@ import { useEffect, useState } from 'react';
 
 const LogoCarousel = () => {
     const logos = [
-        '/Samarth LOGOS/JVv JPGE Logo.jpg',
-        '/Samarth LOGOS/Samarth Agriculture - With Agriculture - v2.jpg',
-        '/Samarth LOGOS/Samarth Diamond_SINCE 1987 PNG.png',
-        '/Samarth LOGOS/Navdeep School PNG.png',
-        '/Samarth LOGOS/SJ- New Logo.png',
+        '/Samarth_LOGOS/JVv_JPGE_Logo.jpg',
+        '/Samarth_LOGOS/Samarth_Agriculture_With_Agriculture.jpg',
+        '/Samarth_LOGOS/Samarth_Diamond_SINCE.png',
+        '/Samarth_LOGOS/Navdeep_School_PNG.png',
+        '/Samarth_LOGOS/SJ_New_Logo.png',
     ];
 
     const [position, setPosition] = useState(0);
