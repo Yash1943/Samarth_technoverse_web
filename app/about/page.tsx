@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { stats } from "@/lib/constants";
 import Team from "@/components/home/Team";
-import { ArrowRight, CheckCircle, Award, Users, Globe, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle, Award, Users, Globe, Clock, Handshake } from "lucide-react";
 
 export default function AboutPage() {
   const values = [
@@ -15,18 +15,23 @@ export default function AboutPage() {
     },
     {
       icon: <Users className="h-10 w-10" />,
-      title: "Collaboration",
+      title: "Growth",
       description: "We work closely with our clients to ensure their success is our success.",
     },
     {
-      icon: <Globe className="h-10 w-10" />,
-      title: "Innovation",
-      description: "We constantly explore new technologies and approaches to stay ahead.",
+      icon: <CheckCircle className="h-10 w-10" />,
+      title: "Commitment",
+      description: "We are dedicated to fulfilling our promises and achieving shared goals.",
     },
     {
       icon: <Clock className="h-10 w-10" />,
-      title: "Reliability",
+      title: "Trustworthiness",
       description: "We deliver on our promises and build long-term relationships based on trust.",
+    },
+    {
+      icon: <Handshake className="h-10 w-10" />,
+      title: "Relationship",
+      description: "We build strong, lasting relationships with our clients based on mutual respect and collaboration.",
     },
   ];
 
@@ -56,35 +61,11 @@ export default function AboutPage() {
               </Button>
             </div>
             <div className="bg-card rounded-xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-2 grid-rows-2 gap-0.5 bg-muted">
-                <div className="aspect-square relative">
+              <div className="grid grid-cols-1 gap-0.5 bg-muted">
+                <div className="aspect-video relative">
                   <Image
-                    src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Team collaboration"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative">
-                  <Image
-                    src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Business meeting"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative">
-                  <Image
-                    src="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Development team"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative">
-                  <Image
-                    src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Creative thinking"
+                    src="/Founder/SamarthTechLogo/SD_Technoverse_PNG.png"
+                    alt="Samarth Technoverse Team"
                     fill
                     className="object-cover"
                   />
@@ -94,6 +75,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <Team/>
 
       {/* <section className="py-12 bg-muted/50">
         <div className="container">
@@ -112,7 +95,7 @@ export default function AboutPage() {
         </div>
       </section> */}
 
-      <section className="py-16 md:py-24 flex justify-center">
+      <section className="py-16 md:py-24 w-full flex justify-center">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -123,7 +106,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-14 mx-auto flex justify-center">
             {values.map((value, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="pt-8 pb-6 px-6">
@@ -154,7 +137,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Expertise & Experience</h3>
                     <p className="text-muted-foreground">
-                      Our team brings decades of combined experience across various technologies and industries.
+                    Our experience spans numerous technologies and business environments, giving us a unique edge.
                     </p>
                   </div>
                 </div>

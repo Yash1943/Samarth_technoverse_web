@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { testimonials } from "@/lib/constants";
+// import { testimonials } from "@/lib/constants";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -13,15 +13,44 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { Quote } from "lucide-react";
+import { get_client_experience } from "@/app/api/fetchData";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://10.10.10.165:8001";
+
+interface ClientExperience {
+  client_name: string;
+  position: string;
+  photo: string;
+  company: string;
+  experience: string;
+}
 
 export default function Testimonials() {
-  const [isMounted, setIsMounted] = useState(false);
+  const [testimonials, setTestimonials] = useState<ClientExperience[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setIsMounted(true);
+    const fetchTestimonials = async () => {
+      try {
+        const response = await get_client_experience();
+        if (response.message) {
+          setTestimonials(response.message);
+        }
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
   }, []);
 
-  if (!isMounted) {
+  if (loading) {
+    return <div>Loading testimonials...</div>;
+  }
+
+  if (!testimonials || testimonials.length === 0) {
     return null;
   }
 
@@ -46,8 +75,8 @@ export default function Testimonials() {
           className="w-full"
         >
           <CarouselContent>
-            {testimonials.map((testimonial) => (
-              <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 pl-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
                 <div className="p-1">
                   <Card className="border bg-card h-full">
                     <CardContent className="p-6">
@@ -55,21 +84,21 @@ export default function Testimonials() {
                         <Quote className="h-8 w-8 opacity-50" />
                       </div>
                       <p className="text-muted-foreground mb-6 italic">
-                        "{testimonial.quote}"
+                        &ldquo;{testimonial.experience}&rdquo;
                       </p>
                       <div className="flex items-center">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
+                            src={testimonial.photo.startsWith('http') ? testimonial.photo : `${BASE_URL}${testimonial.photo}`}
+                            alt={testimonial.client_name}
                             fill
                             className="object-cover"
                           />
                         </div>
                         <div>
-                          <h4 className="font-semibold">{testimonial.name}</h4>
+                          <h4 className="font-semibold">{testimonial.client_name}</h4>
                           <p className="text-sm text-muted-foreground">
-                            {testimonial.position}
+                            {testimonial.position} at {testimonial.company}
                           </p>
                         </div>
                       </div>

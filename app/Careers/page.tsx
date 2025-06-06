@@ -19,38 +19,11 @@ const benefits = [
         title: "Health & Wellness",
         description: "Comprehensive health insurance and wellness programs.",
     },
-    {
-        icon: <Zap className="h-10 w-10" />,
-        title: "Work-Life Balance",
-        description: "Flexible working hours and remote work options.",
-    },
-];
-
-const openPositions = [
-    {
-        title: "Senior Software Developer",
-        department: "Engineering",
-        location: "Remote",
-        type: "Full-time",
-    },
-    {
-        title: "ERP Implementation Specialist",
-        department: "Consulting",
-        location: "Hybrid",
-        type: "Full-time",
-    },
-    {
-        title: "UI/UX Designer",
-        department: "Design",
-        location: "Remote",
-        type: "Full-time",
-    },
-    {
-        title: "Project Manager",
-        department: "Project Management",
-        location: "Hybrid",
-        type: "Full-time",
-    },
+    // {
+    //     icon: <Zap className="h-10 w-10" />,
+    //     title: "Work-Life Balance",
+    //     description: "Flexible working hours and remote work options.",
+    // },
 ];
 
 export default function CareersPage() {
@@ -167,7 +140,7 @@ export default function CareersPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-10">
                         {benefits.map((benefit, index) => (
                             <Card key={index} className="text-center">
                                 <CardContent className="pt-8 pb-6 px-6">

@@ -9,16 +9,12 @@ export default function Footer() {
   const addresses = [
     {
       country: "India",
-      address: "Samarth House, Visnagar, Gujarat, India, 384315",
+      address: "One42 North Tower, 1101 - 1103, Ambli Rd, off Iscon, near Jayantilal BRTS Bus Stand, Ashok Vatika, Ahmedabad, Gujarat 380058",
     },
     {
       country: "India",
-      address: "Ahemdabad, Gujarat, India",
-    },
-    {
-      country: "India",
-      address: "Mumbai, Maharashtra, India",
-    },
+      address: "Samarth House, SH 215, Paldi Road, Visnagar – 384315",
+    }
   ];
 
   return (
@@ -27,11 +23,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <Logo />
+              {/* <Logo /> */}
+              <img 
+                src="/Founder/SamarthTechLogo/SD_Technoverse_SVG.svg"
+                alt="Samarth Technoverse Logo"
+                className="h-28 w-56"
+              />
             </Link>
             <p className="text-muted-foreground">
               Transforming businesses through innovative technology solutions and
-              expert consultancy services since 2025.
+              expert consultancy services.
             </p>
           </div>
 
@@ -84,14 +85,14 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/team"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Our Team
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/Careers"
@@ -111,8 +112,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="bg-card p-6 rounded-lg shadow space-y-4">
-            <h3 className="font-semibold text-lg">Newsletter</h3>
+          <div className="">
+            {/* <h3 className="font-semibold text-lg">Newsletter</h3>
             <p className="text-muted-foreground">
               Subscribe to receive updates on new services and tech insights.
             </p>
@@ -123,16 +124,16 @@ export default function Footer() {
                 className="max-w-[220px]"
               />
               <Button>Subscribe</Button>
-            </div>
-            <div className="space-y-2 pt-4">
+            </div> */}
+            <div className="bg-card p-6 rounded-lg shadow space-y-4 pt-6">
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                <p className="text-sm text-muted-foreground">+91 90394 90594</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
-                  info@samarth-technoverse.com
+                info@samarthtechnoverse.com
                 </p>
               </div>
             </div>
@@ -142,14 +143,16 @@ export default function Footer() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-2xl font-bold mb-2">Locations</h2>
-            <ul className="space-y-2">
-              {addresses.map((addr, idx) => (
-                <li key={idx} className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <span>{addr.address}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start space-x-4">
+              <MapPin className="h-10 w-10 text-muted-foreground" />
+              <ul className="space-y-2">
+                {addresses.map((addr, idx) => (
+                  <li key={idx}>
+                    <span> • {addr.address}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="flex justify-start md:justify-end space-x-4">
             <Button variant="ghost" size="icon" aria-label="Facebook">

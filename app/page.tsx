@@ -16,7 +16,7 @@ export default function Home() {
       {/* <Stats /> */}
       <Services />
       <SDLCSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Team /> */}
       <CTASection />
     </div>

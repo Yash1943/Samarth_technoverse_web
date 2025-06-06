@@ -32,12 +32,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LenisProvider />
-          <RouteLoadingOverlay />
+          {/* <RouteLoadingOverlay /> */}
           <Navbar />
           <div className="flex min-h-screen items-center flex-col w-full">
             <main className="flex-1 w-full">{children}</main>
           </div>
-          <LogoCarousel />
+          {/* <LogoCarousel /> */}
           <Footer />
           <ChatBot />
           <Toaster />

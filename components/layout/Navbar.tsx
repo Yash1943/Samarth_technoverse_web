@@ -71,10 +71,11 @@ export default function Navbar() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold text-2xl bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-                Samarth
-              </span>
-              <span className="font-medium text-xl">Technoverse</span>
+              <img 
+                src="/Founder/SamarthTechLogo/SD_Technoverse_SVG.svg"
+                alt="Samarth Technoverse Logo"
+                className="h-16 w-20 ml-4 sm:h-24 sm:w-28 md:h-28 md:w-32 lg:h-32 lg:w-36"
+              />
             </Link>
           </div>
 

@@ -39,11 +39,11 @@ const botResponses: Record<string, string> = {
   consult:
     "Our consultancy services provide expert guidance on technology selection, digital transformation, and IT infrastructure optimization. What challenges are you facing?",
   contact:
-    "You can reach us at info@samarth-technoverse.com or call +91 98765 43210. Alternatively, you can fill out our contact form and we'll get back to you soon.",
+    "You can reach us at info@samarthtechnoverse.com or call +91 98765 43210. Alternatively, you can fill out our contact form and we'll get back to you soon.",
   pricing:
     "Our pricing varies based on project requirements. We'd be happy to provide a custom quote after understanding your specific needs. Would you like to schedule a consultation?",
   default:
-    "I'm sorry, I couldn't understand that. Please try asking about our services, pricing, or how to contact us. Alternatively, you can email us at info@samarth-technoverse.com for more complex inquiries.",
+    "I'm sorry, I couldn't understand that. Please try asking about our services, pricing, or how to contact us. Alternatively, you can email us at info@samarthtechnoverse.com for more complex inquiries.",
 };
 
 export default function ChatBot() {

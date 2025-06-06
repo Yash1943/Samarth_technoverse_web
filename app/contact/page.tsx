@@ -27,6 +27,8 @@ import { services } from "@/lib/constants";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
+import {insert_client_inquiry} from "../api/fetchData"
+
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -49,6 +51,14 @@ const formSchema = z.object({
 export default function ContactPage() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<z.infer<typeof formSchema>>({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,19 +71,42 @@ export default function ContactPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
+  const onSubmit = async (values: z.infer<typeof formSchema>): Promise<void> => {
+    try {
+      setIsSubmitting(true);
+      setFormData(values);
+      console.log("formData", values);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      form.reset();
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+      const response = await insert_client_inquiry({ 
+        client_name: values.name, 
+        email: values.email, 
+        company: values.company, 
+        phone: values.phone, 
+        service: values.service, 
+        message: values.message 
       });
-    }, 1500);
-  }
+      console.log("insertData", response);
+
+      if (response.message) {
+        setIsSubmitting(false);
+        form.reset();
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -98,13 +131,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Our Location</h3>
                       <p className="text-muted-foreground">
-                        Samarth House , Visnagar, Gujarat, India , 384315
+                        • One42 North Tower, 1101 - 1103, Ambli Rd, off Iscon, near Jayantilal BRTS Bus Stand, Ashok Vatika, Ahmedabad, Gujarat 380058
                       </p>
                       <p className="text-muted-foreground">
-                        Ahemdabad, Gujarat, India
-                      </p>
-                      <p className="text-muted-foreground">
-                        Mumbai, Maharashtra, India
+                        • Samarth House, SH 215, Paldi Road, Visnagar – 384315
                       </p>
                     </div>
                   </div>
@@ -115,10 +145,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Email Us</h3>
                       <p className="text-muted-foreground">
-                        info@samarth-technoverse.com
+                      info@samarthtechnoverse.com
                       </p>
                       <p className="text-muted-foreground">
-                        support@samarth-technoverse.com
+                      support@samarthtechnoverse.com
                       </p>
                     </div>
                   </div>
@@ -128,8 +158,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Call Us</h3>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
-                      <p className="text-muted-foreground">+91 98765 43211</p>
+                      <p className="text-muted-foreground">+91 90394 90594</p>
+                      {/* <p className="text-muted-foreground">+91 98765 43211</p> */}
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -139,10 +169,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Business Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 9AM - 6PM
-                      </p>
-                      <p className="text-muted-foreground">
-                        Saturday: 10AM - 2PM
+                        Monday - Sunday: 9AM - 6PM
                       </p>
                     </div>
                   </div>

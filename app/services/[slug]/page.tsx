@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, CheckCircle, Code, Database, Lightbulb, Cpu } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"
+
 const icons = {
     code: <Code className="h-10 w-10" />,
     database: <Database className="h-10 w-10" />,

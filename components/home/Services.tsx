@@ -86,7 +86,7 @@ export default function Services() {
                     <div className={cn(
                       "absolute inset-0 bg-gradient-to-r opacity-20",
                       service.id === "erp-solutions" && "from-blue-600 to-indigo-600",
-                      service.id === "web-app-development" && "from-teal-500 to-emerald-600",
+                      service.id === "web--app-development" && "from-teal-500 to-emerald-600",
                       service.id === "consultancy-services" && "from-amber-500 to-orange-600",
                       service.id === "automation-solutions" && "from-purple-500 to-pink-600"
                     )} />

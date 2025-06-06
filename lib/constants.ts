@@ -1,3 +1,7 @@
+const FounderImages = [
+  '/images/himanshubhai.jpg',
+];
+
 export const services = [
   {
     id: "erp-solutions",
@@ -13,12 +17,12 @@ export const services = [
       "Performance optimization"
     ],
     caseStudy: {
-      title: "Manufacturing Efficiency Boost",
-      description: "Helped a manufacturing company increase operational efficiency by 35% through our custom ERP implementation."
+      title: "Custom ERP development",
+      description: "Implemented a tailored ERP system for a manufacturing company that streamlined their production workflow, resulting in 35% increased operational efficiency, 25% reduction in inventory costs, and 40% faster order processing time through automated workflows and real-time inventory tracking."
     }
   },
   {
-    id: "web-app-development",
+    id: "web--app-development",
     title: "Web & App Development",
     description: "Create stunning, functional websites and applications that deliver exceptional user experiences across all devices.",
     icon: "code",
@@ -26,12 +30,11 @@ export const services = [
       "Responsive web design",
       "Progressive web apps",
       "Native mobile applications",
-      "E-commerce solutions",
       "UI/UX design"
     ],
     caseStudy: {
-      title: "E-commerce Transformation",
-      description: "Developed a full-scale e-commerce platform that increased client's online sales by 150% in the first quarter."
+      title: "Employee Management Application",
+      description: "Built a comprehensive employee management app for an enterprise client, enabling seamless tracking of attendance, salary, leave requests, and performance reviews. The solution streamlined HR operations, reduced manual errors, and improved employee satisfaction with real-time access to personal records and notifications."
     }
   },
   {
@@ -40,15 +43,15 @@ export const services = [
     description: "Expert guidance on technology adoption, digital transformation, and IT infrastructure optimization for your business needs.",
     icon: "lightbulb",
     features: [
-      "Technology stack advisory",
+      "ERP/CRM Consulting",
       "Digital transformation roadmap",
-      "IT infrastructure assessment",
+      "Business Intelligence & Data Analytics",
       "Software selection guidance",
-      "Cloud migration strategy"
+      "Technology stack advisory",
     ],
     caseStudy: {
-      title: "Healthcare Digital Transformation",
-      description: "Guided a healthcare provider through complete digital transformation, reducing operational costs by 25%."
+      title: "ERP/CRM Consulting",
+      description: "Guided a financial services firm through a successful ERP/CRM implementation, resulting in 45% improved customer response time and 30% reduction in operational costs."
     }
   },
   {
@@ -61,7 +64,6 @@ export const services = [
       "RPA (Robotic Process Automation)",
       "Chatbot development",
       "Document processing automation",
-      "Test automation"
     ],
     caseStudy: {
       title: "Customer Service Revolution",
@@ -102,32 +104,40 @@ export const stats = [
 ];
 
 export const teamMembers = [
-  {
-    id: 1,
-    name: "Samarth Verma",
-    position: "Founder & CEO",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    bio: "With 15+ years in the tech industry, Samarth leads our vision of creating innovative solutions that empower businesses."
-  },
-  {
-    id: 2,
-    name: "Ananya Singh",
-    position: "CTO",
-    image: "https://images.pexels.com/photos/3727468/pexels-photo-3727468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    bio: "Ananya oversees our technical strategy and ensures we stay at the cutting edge of technology trends and best practices."
-  },
-  {
-    id: 3,
-    name: "Vikram Malhotra",
-    position: "Head of Consultancy",
-    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    bio: "Vikram brings deep industry knowledge to help clients navigate complex technological decisions with confidence."
-  },
-  {
-    id: 4,
-    name: "Preeti Kapoor",
-    position: "Lead UX Designer",
-    image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    bio: "Preeti crafts intuitive, beautiful interfaces that delight users and drive business outcomes for our clients."
-  }
+  // {
+  //   id: 1,
+  //   name: "Himanshu Patel",
+  //   position: "Founder & CEO",
+  //   image: "/Founder/himanshubhai.jpg",
+  //   bio: "With 15+ years in the tech industry, Samarth leads our vision of creating innovative solutions that empower businesses."
+  // },
+  // {
+  //   id: 2,
+  //   name: "Ritesh Patel",
+  //   position: "Business Analyst",
+  //   image: "/Founder/riteshbhai.png",
+  //   bio: "Ritesh brings 10+ years of HR expertise, specializing in talent acquisition, employee engagement, and organizational development. She leads our HR initiatives, ensuring we attract and retain top talent while fostering a positive and inclusive workplace culture."
+  // },
+  // {
+  //   id: 3,
+  //   name: "Priya Sharma",
+  //   position: "HR & Talent Management Expert",
+  //   image: "/images/priya.jpg",
+  //   bio: "Priya brings 10+ years of HR expertise, specializing in talent acquisition, employee engagement, and organizational development. She leads our HR initiatives, ensuring we attract and retain top talent while fostering a positive and inclusive workplace culture."
+  // },
+  
+  // {
+  //   id: 4,
+  //   name: "Vikram Malhotra",
+  //   position: "Head of Consultancy",
+  //   image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   bio: "Vikram brings deep industry knowledge to help clients navigate complex technological decisions with confidence."
+  // },
+  // {
+  //   id: 5,
+  //   name: "Preeti Kapoor",
+  //   position: "Lead UX Designer",
+  //   image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   bio: "Preeti crafts intuitive, beautiful interfaces that delight users and drive business outcomes for our clients."
+  // }
 ];
