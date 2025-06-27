@@ -15,6 +15,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Samarth Technoverse - IT Solutions & Services',
   description: 'Expert IT services including ERP solutions, web & app development, and technology consultancy for businesses of all sizes.',
+  icons: {
+    icon: '/Founder/SamarthTechLogo/SD_Technoverse_JPG.jpg',
+    shortcut: '/Founder/SamarthTechLogo/SD_Technoverse_JPG.jpg',
+    apple: '/Founder/SamarthTechLogo/SD_Technoverse_JPG.jpg',
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/Founder/SamarthTechLogo/SD_Technoverse_JPG.jpg" type="image/jpeg" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
